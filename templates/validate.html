@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/validate" method="post">
+        {{ form.hidden_tag() }}
+        <p>Your 6-digit one time password has been sent to your email</p>
+        <p>{{ form.otp(size=32, placeholder="otp") }}</p>
+        <button type="submit">Verify</button>
+    </form>
+
+{% endblock %}

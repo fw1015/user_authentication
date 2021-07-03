@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/register" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <p>{{ form.username(placeholder="username") }}</p>
+        {% for error in form.username.errors %}
+            <span>[{{ error }}]</span>
+        {% endfor %}
+        <p>{{ form.email(placeholder="email") }}</p>
+        {% for error in form.email.errors %}
+            <span>[{{ error }}]</span>
+        {% endfor %}
+        <p>{{ form.password(placeholder="password*$%!@") }}</p>
+        {% for error in form.password.errors %}
+            <span>[{{ error }}]</span>
+        {% endfor %}
+        <p>{{ form.password2(size=32, placeholder="password*$%!@") }}</p>
+        {% for error in form.password2.errors %}
+            <span>[{{ error }}]</span>
+        {% endfor %}
+
+        <button type="submit">Sign Up</button>
+    </form>
+{% endblock %}

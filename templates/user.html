@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p>Welcome Back {{username}}!</p>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>First Name:</p>
+        <p>{{ form.fname(size=32, placeholder="First Name") }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{url_for('my_CV')}}">My CV</a>
+    <a href="{{url_for('logout')}}">Log Out</a>
+{% endblock %}
