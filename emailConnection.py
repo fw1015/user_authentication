@@ -1,7 +1,7 @@
 import smtplib
 
 def send_email(email, msg):
-    test_email = 'founder101598@gmail.com'
+    test_email = 'xxxxxxxx@gmail.com'
     password = 'xxxxx'
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
