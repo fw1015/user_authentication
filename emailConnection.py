@@ -2,7 +2,7 @@ import smtplib
 
 def send_email(email, msg):
     test_email = 'founder101598@gmail.com'
-    password = 'hiwairo11'
+    password = 'xxxxxx'
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=test_email, password=password)
